@@ -1,1 +1,119 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         version="3.0">
+    <servlet>
+        <servlet-name>AnServlet</servlet-name>
+        <servlet-class>AnServlet</servlet-class>  <!-- No package name -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnServlet</servlet-name>
+        <url-pattern>/AnServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>PermissionsServlet</servlet-name>
+    <servlet-class>PermissionsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>PermissionsServlet</servlet-name>
+    <url-pattern>/PermissionsServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ScanAppsServlet</servlet-name>
+    <servlet-class>ScanAppsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ScanAppsServlet</servlet-name>
+    <url-pattern>/ScanAppsServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DataLeakServlet</servlet-name>
+    <servlet-class>DataLeakServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DataLeakServlet</servlet-name>
+    <url-pattern>/DataLeakServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TermsServlet</servlet-name>
+    <servlet-class>TermsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TermsServlet</servlet-name>
+    <url-pattern>/TermsServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>UpdateServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ScoreServlet</servlet-name>
+    <servlet-class>ScoreServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ScoreServlet</servlet-name>
+    <url-pattern>/ScoreServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>UninstallServlet</servlet-name>
+    <servlet-class>UninstallServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UninstallServlet</servlet-name>
+    <url-pattern>/UninstallServlet</url-pattern>
+</servlet-mapping>
+       
+       
+    <servlet>
+        <servlet-name>BackgroundServlet</servlet-name>
+        <servlet-class>BackgroundServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BackgroundServlet</servlet-name>
+        <url-pattern>/BackgroundServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MonitorServlet</servlet-name>
+        <servlet-class>MonitorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MonitorServlet</servlet-name>
+        <url-pattern>/MonitorServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DLeakServlet</servlet-name>
+        <servlet-class>DLeakServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DLeakServlet</servlet-name>
+        <url-pattern>/DLeakServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
 
