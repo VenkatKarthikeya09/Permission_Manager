@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Update Status</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">  <!-- General styles -->
+    <link rel="stylesheet" href="navbar.css">  <!-- Navbar styles -->
+
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <style>
+        /* Main Content Wrapper */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding-top: 80px; /* Ensure it starts below navbar */
+}
+
+/* Container Styling */
+.container {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-x: auto; /* Allows scrolling if content overflows */
+}
+
+/* Table Styling */
+/* Ensure table maintains its size */
+table {
+    width: 100%;
+    table-layout: fixed; /* Prevents table columns from resizing */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Ensure columns remain fixed */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show "..." if text is too long */
+}
+
+/* Prevent table shrinking when searching */
+#appContainers tr {
+    display: table-row; /* Keep table structure */
+}
+
+
+
+/* Header Styling */
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status Message */
+#statusMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Error Message */
+#errorMessage {
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+
+/* Search Bar Styling */
+#searchBar {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* On Focus Effect */
+#searchBar:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 4px 10px rgba(0, 91, 187, 0.2);
+}
+
+/* Prevent Table from Disappearing When No Search Results */
+#appContainers tr {
+    display: table-row; /* Keep table structure even when filtering */
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Floating Navbar -->
+    <nav class="floating-navbar">
+        <ul>
+            <li class="active">
+                <a href="home.html">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <i class="fas fa-project-diagram"></i> Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="account.html">
+                    <i class="fas fa-user"></i> Account
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+    <div class="container">
+        <h1>📢 Application Update Status</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="🔍 Search App Name..." onkeyup="filterTable()">
+
+        <!-- Process Status -->
+        <p id="statusMessage">🔄 Fetching data...</p>
+
+        <!-- Table for displaying fetched data -->
+        <table>
+            <thead>
+                <tr>
+                    <th>App Name</th>
+                    <th>Recent Update</th>
+                    <th>Stable Update</th>
+                </tr>
+            </thead>
+            <tbody id="appContainers">
+                <!-- Data will be inserted here by update.js -->
+            </tbody>
+        </table>
+
+        <!-- Error message placeholder -->
+        <p id="errorMessage">❌ Error fetching data. Please try again.</p>
+    </div>
+</main>
+
+
+    <!-- JavaScript -->
+    <script src="update.js"></script>
+</body>
+</html>

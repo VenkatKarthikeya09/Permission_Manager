@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Permissions | Permission Manager</title>
+    <link rel="stylesheet" href="navbar.css">  <!-- Keeping navbar same -->
+    <link rel="stylesheet" href="permissionsstyles.css">  <!-- Maintaining existing styles -->
+    <script defer src="comparison.js"></script>
+</head>
+<body>
+
+    <!-- Navbar Section (Same as previous) -->
+    <nav class="floating-navbar">
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-th-large"></i> About Us</a></li>
+            <li><a href="segments.html"><i class="fas fa-project-diagram"></i> Contact Us</a></li>
+            <li><a href="account.html"><i class="fas fa-user"></i> Account</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Comparison Section -->
+    <div class="comparison-container">
+        <h2>Compare Application Permissions</h2>
+
+        <!-- Dropdown List for Selecting Apps -->
+        <div class="app-dropdowns">
+            <select id="app-list-1" onchange="fetchAppData(this.value, 'app-info-1')">
+                <option value="">Select First App</option>
+            </select>
+            <select id="app-list-2" onchange="fetchAppData(this.value, 'app-info-2')">
+                <option value="">Select Second App</option>
+            </select>
+        </div>
+
+        <!-- Comparison Display -->
+        <div class="comparison-section">
+            <div id="app-info-1" class="app-card"></div>
+            <div id="app-info-2" class="app-card"></div>
+        </div>
+    </div>
+
+    <style>
+        /* Keeping styles same as 'permissions.html' */
+        .comparison-container {
+            margin: 100px auto 20px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .app-dropdowns {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .app-dropdowns select {
+            width: 45%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .comparison-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .app-card {
+            background: #fff;
+            padding: 15px;
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .app-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</body>
+</html>

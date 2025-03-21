@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Monitoring</title>
+    <link rel="stylesheet" href="monitor.css">  <!-- Main CSS -->
+    <link rel="stylesheet" href="navbar.css">  <!-- Navbar CSS -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Floating Navbar -->
+    <nav class="floating-navbar">
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="account.html"><i class="fas fa-user"></i> Account</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="monitor-container">
+        <h2>Application Monitoring</h2>
+
+        <!-- Monitoring Selection Box -->
+        <div class="monitor-box">
+            <label for="appSearch">Search Application:</label>
+            <input type="text" id="appSearch" placeholder="Type to search...">
+
+            <label for="appSelect">Select an application:</label>
+            <select id="appSelect">
+                <option value="">Loading apps...</option>
+            </select>
+
+            <label for="monitorDuration">Select Monitoring Time:</label>
+            <select id="monitorDuration">
+                <option value="30">30s</option>
+                <option value="60">1 min</option>
+                <option value="300">5 mins</option>
+                <option value="600">10 mins</option>
+                <option value="900">15 mins</option>
+                <option value="2340">39 mins</option>
+                <option value="3600">1 hr</option>
+                <option value="10800">3 hrs</option>
+                <option value="21600">6 hrs</option>
+            </select>
+
+            <button id="monitorBtn">Start Monitoring</button>
+
+            <!-- Monitoring Status -->
+            <div id="monitorStatus" class="status-box"></div>
+        </div>
+
+        <!-- Monitoring Results Box -->
+        <div class="result-box" id="monitorResults">
+            <h3>Monitoring Results</h3>
+            <p id="memoryUsage"></p>
+            <p id="ramUsage"></p>
+            <p id="cpuUsage"></p>
+            <p id="batteryUsage"></p>
+            <p id="securityStatus"></p>
+        </div>
+    </div>
+
+    <script src="monitor.js"></script>  <!-- JavaScript file -->
+</body>
+</html>

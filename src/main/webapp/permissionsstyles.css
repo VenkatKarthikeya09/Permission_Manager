@@ -1,0 +1,79 @@
+/* Keep background light blue */
+body {
+    background-color: #dff0ff; /* Light blue */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center content under the navbar */
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align cards in center */
+    margin-top: 20px; /* Space below navbar */
+}
+
+/* Style for app cards */
+.app-card {
+    width: 300px;
+    background: white;  /* White background for cards */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.app-card:hover {
+    transform: scale(1.05);
+}
+
+/* App Title */
+.app-card h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Permission details */
+.app-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Keep navbar looking good */
+.navbar {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* Search bar styling */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchBar {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+#searchBar:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 2px 6px rgba(0, 123, 255, 0.3);
+}
+

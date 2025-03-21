@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uninstall Risky Apps</title>
+    
+    <!-- Embedded CSS -->
+    <style>
+    
+    body {
+            font-family: Arial, sans-serif;
+            background-color:#cce7ff; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+        /* Styles for the container below navbar */
+        .container {
+            max-width: 600px; /* Adjust width */
+            margin: 100px auto; /* Center content & space below navbar */
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        #scanButton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #scanButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Scan Result Styling */
+        #scanResult {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+
+    <link rel="stylesheet" href="navbar.css"> <!-- Navbar CSS -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="floating-navbar">
+        <ul>
+            <li class="active">
+                <a href="home.html">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> About Us
+                </a>
+            </li>
+            <li>
+                <a href="segments.html">
+                    <i class="fas fa-project-diagram"></i> Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="account.html">
+                    <i class="fas fa-user"></i> Account
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <h2>Uninstall Risky Apps</h2>
+        <button id="scanButton">Scan for Untrusted Apps</button>
+        <div id="scanResult">You are safe! No harmful apps found.</div>
+    </div>
+
+    <script src="uninstall.js"></script>
+</body>
+</html>

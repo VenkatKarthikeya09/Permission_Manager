@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissions | Permission Manager</title>
+    <link rel="stylesheet" href="navbar.css">  <!-- Navbar Styling -->
+    <link rel="stylesheet" href="permissionsstyles.css">  <!-- Main Styles -->
+    <script defer src="permissions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="floating-navbar">
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-th-large"></i> About Us</a></li>
+            <li><a href="segments.html"><i class="fas fa-project-diagram"></i> Contact Us</a></li>
+            <li><a href="account.html"><i class="fas fa-user"></i> Account</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Apps Permissions Section -->
+    <div class="permissions-container">
+        <h2>Permission Revoker</h2>
+        <p>"Adjust app permissions to ensure your safety."</p>
+
+        <!-- 🔎 Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" onkeyup="searchApps()" placeholder="Search apps...">
+        </div>
+
+        <div id="app-list">
+            <!-- App Containers Will be Injected Here -->
+        </div>
+    </div>
+
+    <div id="results">
+        <p>Loading permissions...</p> <!-- Default message before data loads -->
+    </div>
+
+    <style>
+        /* Keep existing styles from navbar.css and permissionsstyles.css */
+
+        .permissions-container {
+            margin: 100px auto 20px;
+            width: 80%;
+            text-align: center;
+        }
+        .app-container {
+            background: #fff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .app-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .permission-list {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .permission-yes {
+            color: green;
+            font-weight: bold;
+        }
+        .permission-no {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* 🔎 Search Bar Styling */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        #searchBar {
+            width: 60%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: 0.3s ease-in-out;
+        }
+        #searchBar:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0px 2px 6px rgba(0, 123, 255, 0.3);
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Activity Scanner</title>
+    <script defer src="background.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cce7ff; /* Light blue background */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Navbar Margin to Avoid Overlap */
+        .content {
+            margin-top: 100px; /* Adjust based on navbar height */
+        }
+
+        /* Container for Scanner */
+        .scanner-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            min-width: 300px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Scan Button */
+        #scanButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        #scanButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Activities Display Box */
+        #activities {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 50px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Floating Navigation Bar -->
+    <nav class="floating-navbar">
+        <ul>
+            <li class="active">
+                <a href="home.html">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> About Us
+                </a>
+            </li>
+            <li>
+                <a href="segments.html">
+                    <i class="fas fa-project-diagram"></i> Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="account.html">
+                    <i class="fas fa-user"></i> Account
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Scanner Container -->
+        <div class="scanner-container">
+            <h2>Background Activity Scanner</h2>
+            <button id="scanButton">Start Scan</button>
+        </div>
+
+        <!-- Activities Box -->
+        <div id="activities">Waiting for scan...</div>
+    </div>
+
+</body>
+</html>

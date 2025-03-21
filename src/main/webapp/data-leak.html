@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Leak Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Data Leak Scanner</h2>
+
+        <!-- Select Application -->
+        <label for="appSelect">Select an application:</label>
+        <select id="appSelect">
+            <option value="">Scanning system for installed apps...</option>
+        </select>
+
+        <!-- Estimated Scan Time -->
+        <p><strong>Estimated Scan Time:</strong> <span id="estimatedTime">Not started</span></p>
+
+        <!-- Check Button -->
+        <button id="checkBtn">Check!</button>
+
+        <!-- Scan Status -->
+        <p id="scanStatus"></p>
+
+        <!-- Results -->
+        <div id="scanResults" style="display: none;">
+            <h3>Scan Results</h3>
+            <ul id="vulnerableApps"></ul>
+        </div>
+    </div>
+
+    <script src="data-leak.js"></script>
+</body>
+</html>

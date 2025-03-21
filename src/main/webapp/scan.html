@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Applications | Permission Manager</title>
+    <link rel="stylesheet" href="navbar.css"> <!-- Navbar Styling -->
+    <link rel="stylesheet" href="styles.css"> <!-- Main Styles -->
+    <script defer src="scan.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#cce7ff; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            background-color: #007bff;
+            padding: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Container for the app scan results */
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 175px;
+        }
+
+        /* Button */
+        #scanButton {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #scanButton:hover {
+            background-color: #218838;
+        }
+
+        /* General Styles */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #scanResults {
+            margin-top: 20px;
+            padding: 15px;
+            display: none;
+        }
+
+        /* App Status Styles (Green, Red, Grey) */
+        .green, .red, .grey {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .green {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .red {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        .grey {
+            background-color: #e2e3e5;
+            border: 1px solid #d6d8db;
+        }
+
+        /* Side-by-Side Permissions */
+        .permissions-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .permissions-box {
+            width: 48%;
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .permissions-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .permissions-box li {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .permissions-box strong {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+            color: #333;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+    </style>
+</head>
+<body>
+    <body>
+
+    <!-- Navbar Section -->
+    <nav class="floating-navbar">
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-th-large"></i> About Us</a></li>
+            <li><a href="segments.html"><i class="fas fa-project-diagram"></i> Contact Us</a></li>
+            <li><a href="account.html"><i class="fas fa-user"></i> Account</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container fade-in">
+        <h1>System Application Scanner</h1>
+        <button id="scanButton">Start Scan</button>
+        <div id="scanResults"></div>
+    </div>
+    
+</body>
+</html>
