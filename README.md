@@ -15,3 +15,8 @@ Upon logging in, users can scan their devices or applications for installed apps
 
 The application presents its findings through clean dashboards and detailed reports, enabling users to make informed decisions regarding their installed applications. The system also focuses on educating users about potential risks by clearly highlighting unsafe permissions and providing recommendations for better security practices.
 By combining efficient backend processing, database-driven analysis, and interactive front-end design, the Permission Manager ensures privacy control, transparency, and digital safety in an increasingly app-dependent world.
+
+OUTPUT IMAGES:
+![image](https://github.com/user-attachments/assets/caf99f3a-2964-4c1d-b0a8-c6543bf9f6db)
+
+
