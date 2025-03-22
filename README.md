@@ -1,4 +1,4 @@
-@VenkatKarthikeya09
+Author - VenkatKarthikeya09
 
 # Permission_Manager
 The Permission Manager is a web-based application designed to enhance digital privacy and security by enabling users to monitor, analyze, and manage the permissions granted to installed applications. With the growing number of apps requesting extensive permissions, often beyond their functional requirements, there is a significant risk of privacy invasion and data leakage. This project aims to empower users with complete control over app permissions, providing real-time insights and actionable solutions.
