@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Permission Manager</title>
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #cce7ff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        .container {
+		    margin-top: 100px;
+		    padding: 25px;
+		    max-width: 880px; /* reduced by 20% */
+		    margin-left: auto;
+		    margin-right: auto;
+		    background: rgba(255, 255, 255, 0.95);
+		    border-radius: 15px;
+		    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+		    animation: fadeIn 1s ease forwards;
+		}
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.05rem;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .team-section {
+            margin-top: 40px;
+        }
+
+        .team-title {
+            margin-bottom: 20px;
+            color: #007BFF;
+            font-size: 1.9rem;
+            text-align: center;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .member-card {
+            width: 220px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+        }
+
+        .member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            object-fit: cover;
+            border: 4px solid rgba(0, 123, 255, 0.3);
+            transition: transform 0.4s, border 0.4s;
+            box-shadow: inset 0 0 20px rgba(0, 123, 255, 0.2);
+        }
+
+        .member-card:hover img {
+            transform: scale(1.2);
+            border-color: rgba(0, 123, 255, 0.6);
+            box-shadow: inset 0 0 30px rgba(0, 123, 255, 0.35);
+        }
+
+        .member-card h4 {
+            margin-bottom: 4px;
+            color: #007BFF;
+            font-size: 1.15rem;
+        }
+
+        .member-card p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="floating-navbar">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li class="active">
+                <a href="about.html">
+                    <i class="fas fa-th-large"></i> About Us
+                </a>
+            </li>
+            <li>
+                <a href="segments.html">
+                    <i class="fas fa-project-diagram"></i> Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="account.html">
+                    <i class="fas fa-user"></i> Account
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>About Permission Manager</h1>
+        <p>
+            Permission Manager empowers users by offering full visibility and control over the permissions apps use on their devices.  
+            We believe privacy and transparency are essential in today’s digital world, and our mission is to help users make smarter, safer decisions.
+        </p>
+        <p>
+            From analyzing device permissions and app activity to recommending privacy-friendly alternatives, we are constantly working to improve user control and digital well-being.
+        </p>
+
+        <div class="team-section">
+            <h2 class="team-title">Faculty Incharge & Guide</h2>
+            <div class="team-members">
+                <div class="member-card">
+                    <img src="images/faculty1.jpg" alt="Faculty 1">
+                    <h4>Mr. G. Sekhar Reddy</h4>
+                    <p>Faculty Incharge</p>
+                </div>
+                <div class="member-card">
+                    <img src="images/faculty2.jpg" alt="Faculty 2">
+                    <h4>Dr. Ramesh Babu</h4>
+                    <p>Project Guide</p>
+                </div>
+                <div class="member-card">
+                    <img src="images/faculty3.jpg" alt="Faculty 3">
+                    <h4>Dr. K. Sudheer Reddy</h4>
+                    <p>Head of Department</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2 class="team-title">Student Team Members</h2>
+            <div class="team-members">
+                <div class="member-card">
+                    <img src="images/21EG109A32.jpg" alt="Venkat Karthikeya">
+                    <h4>T. Venkat Karthikeya</h4>
+                    <p>Founder & Lead Developer</p>
+                </div>
+                <div class="member-card">
+                    <img src="images/21EG109A60.jpg" alt="Koushik Reddy">
+                    <h4>B. Koushik Reddy</h4>
+                    <p>Founder & UI/UX Designer</p>
+                </div>
+                <div class="member-card">
+                    <img src="images/21EG109A48.jpg" alt="Thirupathi Reddy">
+                    <h4>J. Thirupathi Reddy</h4>
+                    <p>Founder & Security Expert</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
